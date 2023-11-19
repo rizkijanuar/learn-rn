@@ -7,7 +7,7 @@ const Button = (props) => {
     <View style={styles.container(color)}>
       <Text style={styles.text(textColor)}>{text}</Text>
     </View>
-  )
+  );
 }
 
 export default Button

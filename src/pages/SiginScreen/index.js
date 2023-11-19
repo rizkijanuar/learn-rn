@@ -25,14 +25,14 @@ const SigninScreen = () => {
 export default SigninScreen
 
 const styles = StyleSheet.create({
-    page: {
-        flex: 1,
-    },
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-        paddingHorizontal: 24,
-        paddingVertical: 26,
-        marginTop: 24
-    }
-})
+  page: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    paddingHorizontal: 24,
+    paddingVertical: 26,
+    marginTop: 24,
+  },
+});
