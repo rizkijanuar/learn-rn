@@ -12,6 +12,7 @@ import {
   SignupSuccessScreen,
   SplashScreen,
 } from '../pages';
+import {BottomNavigator} from '../components';
 
 const Stack = createStackNavigator(); // Stack Navigator
 const Tab = createBottomTabNavigator(); // Bottom Navigator
@@ -19,10 +20,22 @@ const Tab = createBottomTabNavigator(); // Bottom Navigator
 // Bottom Navigator
 const MainApp = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
-      <Tab.Screen name="OrderScreen" component={OrderScreen} />
-      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+      <Tab.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="OrderScreen"
+        component={OrderScreen}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="ProfileScreen"
+        component={ProfileScreen}
+        options={{headerShown: false}}
+      />
     </Tab.Navigator>
   );
 };
