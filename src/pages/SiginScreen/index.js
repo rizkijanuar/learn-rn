@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { Button, Gap, Header, TextInput } from '../../components'
 
-const SigninScreen = () => {
+const SigninScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title={'Sign In'} subTitle={'Find your best ever meal'} />
@@ -16,11 +16,16 @@ const SigninScreen = () => {
         <Gap height={24} />
         <Button text={'Sign in'} />
         <Gap height={12} />
-        <Button text={'New Account'} color={'#8D92A3'} textColor={"white"} />
+        <Button
+          text={'New Account'}
+          color={'#8D92A3'}
+          textColor={'white'}
+          onPress={() => navigation.navigate('SignupScreen')}
+        />
       </View>
     </View>
   );
-}
+};
 
 export default SigninScreen
 
